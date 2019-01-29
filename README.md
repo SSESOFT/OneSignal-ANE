@@ -250,10 +250,8 @@ FOR iOS:
 <!-- add only if you want to send location based notifications -->
 <key>NSLocationWhenInUseUsageDescription</key>
 <string>I need location reason</string>
-
 <key>NSLocationAlwaysUsageDescription</key>
 <string>I need location reason</string>
-
 <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 <string>I need location reason</string>
 
