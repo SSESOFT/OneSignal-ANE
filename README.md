@@ -189,7 +189,9 @@ FOR ANDROID:
         android:permission="com.google.android.c2dm.permission.SEND">
         <intent-filter>
             <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
-            <category android:name="air.com.myflashlabs.onesignal"/>
+
+            <!-- put your app package name instead of [PACKAGE_NAME] for example air.com.site.app -->
+            <category android:name="[PACKAGE_NAME]"/>
         </intent-filter>
     </receiver>
 
@@ -204,9 +206,10 @@ FOR ANDROID:
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
 
     <!--dependency.firebase.common-->
+    <!-- put your app package name instead of [PACKAGE_NAME] for example air.com.site.app -->
     <provider 
         android:name="com.google.firebase.provider.FirebaseInitProvider"
-        android:authorities="air.com.myflashlabs.onesignal.firebaseinitprovider"
+        android:authorities="[PACKAGE_NAME].firebaseinitprovider"
         android:exported="false"
         android:initOrder="100"/>
 
