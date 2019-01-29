@@ -356,7 +356,7 @@ Necessary | Optional
 # Tutorials
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 [Send OneSignal notifications with custom icon from AdobeAIR app](https://www.youtube.com/watch?v=gb298grbZ-s)  
-[Supporting iOS 10+ rich notifications in your AIR app]()
+[Supporting iOS 10+ rich notifications in your AIR app](https://youtu.be/yqn6E1R1uzs)  
 
 # Premium Support #
 [![Premium Support package](https://www.myflashlabs.com/wp-content/uploads/2016/06/professional-support.jpg)](https://www.myflashlabs.com/product/myflashlabs-support/)
