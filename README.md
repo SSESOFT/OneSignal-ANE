@@ -1,7 +1,7 @@
 # OneSignal-ANE
 OneSignal is a very powerful platform for sending rich notifications on Android/iOS apps and we have now transpiled the whole framework fully to AdobeAIR! You can send rich notifications to your Android/iOS apps built with AdobeAIR.
 
-![alt text](https://onesignal.com/images/android_and_ios_notification_image.gif)
+![OneSignal ANE](https://myflashlab.github.io/resources/android_and_ios_notification_image.gif)
 
 **Main Features:**
 * Supports notifications with media attachments
@@ -352,6 +352,11 @@ Necessary | Optional
 . | [SOURCE_LOCATION (Android)](https://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/nativePermissions/PermissionCheck.html#SOURCE_LOCATION)  
 . | [SOURCE_LOCATION_WHEN_IN_USE (iOS)](https://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/nativePermissions/PermissionCheck.html#SOURCE_LOCATION_WHEN_IN_USE)  
 . | [SOURCE_LOCATION_ALWAYS (iOS)](https://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/nativePermissions/PermissionCheck.html#SOURCE_LOCATION_ALWAYS) 
+
+# Commercial Version
+https://www.myflashlabs.com/product/onesignal-ane-adobe-air-native-extension/
+
+[![OneSignal ANE](https://www.myflashlabs.com/wp-content/uploads/2019/04/product_adobe-air-ane-onesignal.jpg)](https://www.myflashlabs.com/product/onesignal-ane-adobe-air-native-extension/)
 
 # Tutorials
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
