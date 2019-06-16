@@ -11,6 +11,7 @@ Copy the purchased [onesignal.ane](https://www.myflashlabs.com/product/onesignal
 1. googlePlayServices_base.ane
 1. googlePlayServices_basement.ane
 1. googlePlayServices_location.ane
+1. googlePlayServices_measurementBase.ane
 1. googlePlayServices_places.ane
 1. googlePlayServices_stats.ane
 1. googlePlayServices_tasks.ane

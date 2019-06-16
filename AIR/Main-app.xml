@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<application xmlns="http://ns.adobe.com/air/application/31.0">
+<application xmlns="http://ns.adobe.com/air/application/32.0">
 
     <id>com.myflashlabs.onesignal</id>
     <filename>Main</filename>
@@ -31,18 +31,16 @@
             <manifest android:installLocation="auto">
                 <uses-permission android:name="android.permission.INTERNET"/>
                 <uses-permission android:name="android.permission.WAKE_LOCK"/>
-                <uses-permission android:name="android.permission.VIBRATE"/>
+		        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+		        <uses-permission android:name="android.permission.VIBRATE"/>
                 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
                 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-
-                <!-- add only if you want to send location based notifications -->
-                <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-
-                <!-- put your app package name instead of [PACKAGE_NAME] for example air.com.site.app -->
                 <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26"/>
+                <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+
+                <!-- Replace [PACKAGE_NAME] with your app package name, for example air.com.site.app  -->
                 <permission android:name="[PACKAGE_NAME].permission.C2D_MESSAGE" android:protectionLevel="signature"/>
                 <uses-permission android:name="[PACKAGE_NAME].permission.C2D_MESSAGE"/>
-                <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
 
                 <!-- Samsung -->
                 <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
@@ -143,7 +141,7 @@
 
 
                     <!--dependency.firebase.iid-->
-                    <service android:name="com.google.firebase.components.ComponentDiscoveryService">
+                    <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
                         <meta-data
                             android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
                             android:value="com.google.firebase.components.ComponentRegistrar"/>
@@ -155,9 +153,6 @@
                         android:permission="com.google.android.c2dm.permission.SEND">
                         <intent-filter>
                             <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
-
-                            <!-- put your app package name instead of [PACKAGE_NAME] for example air.com.site.app -->
-                            <category android:name="[PACKAGE_NAME]"/>
                         </intent-filter>
                     </receiver>
 
@@ -223,8 +218,10 @@
             <!-- add only if you want to send location based notifications -->
             <key>NSLocationWhenInUseUsageDescription</key>
             <string>I need location reason</string>
+
             <key>NSLocationAlwaysUsageDescription</key>
             <string>I need location reason</string>
+
             <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
             <string>I need location reason</string>
 
@@ -275,6 +272,7 @@
         <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.base</extensionID>
         <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
         <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.location</extensionID>
+        <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.measurementBase</extensionID>
         <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.places</extensionID>
         <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.stats</extensionID>
         <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.tasks</extensionID>

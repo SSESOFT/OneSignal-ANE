@@ -177,7 +177,7 @@ FOR ANDROID:
 
 
     <!--dependency.firebase.iid-->
-    <service android:name="com.google.firebase.components.ComponentDiscoveryService">
+    <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
         <meta-data 
             android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" 
             android:value="com.google.firebase.components.ComponentRegistrar"/>
@@ -189,9 +189,6 @@ FOR ANDROID:
         android:permission="com.google.android.c2dm.permission.SEND">
         <intent-filter>
             <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
-
-            <!-- put your app package name instead of [PACKAGE_NAME] for example air.com.site.app -->
-            <category android:name="[PACKAGE_NAME]"/>
         </intent-filter>
     </receiver>
 
@@ -332,6 +329,7 @@ Embedding the ANE:
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.base</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.location</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.measurementBase</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.places</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.stats</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.tasks</extensionID>
