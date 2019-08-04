@@ -1,5 +1,9 @@
 OneSignal AIR Native Extension
 
+*Aug 4, 2019 - V1.0.1*
+* Added Android 64-bit Support
+* included the class ```com.myflashlab.air.extensions.localNotifi.NotificationChannel``` so you will be able to register notifications channels required on Android 8+ Check out the sample project to see how it is used.
+
 *Jun 17, 2019 - V1.0.0*
 * Updated OneSignal Android SDK to V3.10.9 - min Android API to run the ANE is 19+
 * Updated OneSignal iOS SDK to V2.10.0 - min iOS to run the ANE is V10+

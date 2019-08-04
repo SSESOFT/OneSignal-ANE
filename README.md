@@ -84,7 +84,7 @@ FOR ANDROID:
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
 <!-- put your app package name instead of [PACKAGE_NAME] for example air.com.site.app -->
-<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26"/>
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="28"/>
 <permission android:name="[PACKAGE_NAME].permission.C2D_MESSAGE" android:protectionLevel="signature"/>
 <uses-permission android:name="[PACKAGE_NAME].permission.C2D_MESSAGE"/>
 <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>

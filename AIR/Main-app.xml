@@ -4,7 +4,7 @@
     <id>com.myflashlabs.onesignal</id>
     <filename>Main</filename>
     <name>OneSignal</name>
-    <versionNumber>1.0.0</versionNumber>
+    <versionNumber>1.0.1</versionNumber>
     <initialWindow>
 
         <content>SWF file name is set automatically at compile time</content>
@@ -35,12 +35,8 @@
 		        <uses-permission android:name="android.permission.VIBRATE"/>
                 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
                 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-                <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26"/>
+                <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="28"/>
                 <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
-
-                <!-- Replace [PACKAGE_NAME] with your app package name, for example air.com.site.app  -->
-                <permission android:name="[PACKAGE_NAME].permission.C2D_MESSAGE" android:protectionLevel="signature"/>
-                <uses-permission android:name="[PACKAGE_NAME].permission.C2D_MESSAGE"/>
 
                 <!-- Samsung -->
                 <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
@@ -278,4 +274,7 @@
         <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.tasks</extensionID>
 
     </extensions>
+
+
+
 </application>

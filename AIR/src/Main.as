@@ -29,6 +29,7 @@ import flash.utils.setTimeout;
 
 import com.myflashlab.air.extensions.dependency.OverrideAir;
 import com.myflashlab.air.extensions.onesignal.*;
+import com.myflashlab.air.extensions.localNotifi.NotificationChannel;
 
 /**
  * ...
@@ -87,7 +88,9 @@ public class Main extends Sprite
 		_list.vDirection = Direction.TOP_TO_BOTTOM;
 		_list.space = BTN_SPACE;
 		
+		createAndroidNotificationChannel();
 		init();
+		
 	}
 	
 	private function onInvoke(e:InvokeEvent):void
@@ -139,6 +142,33 @@ public class Main extends Sprite
 		}
 	}
 	
+	private function createAndroidNotificationChannel():void
+	{
+		// channels are required on Android 8+ only
+		if(OverrideAir.os == OverrideAir.ANDROID)
+		{
+			// create a new channel with a unique id
+			var channel:NotificationChannel = new NotificationChannel("myChannelId", "channel name");
+			
+			/*
+				you can add your own sound files into the "res/raw" using the resourceManager tool
+				available in the ANELAB software: https://github.com/myflashlab/ANE-LAB/
+			*/
+			channel.rawSound = "myflashlab_toy"; // this is myflashlab_toy.mp3 file placed inside Android "res/raw"
+			channel.showBadge = true;
+			channel.importance = NotificationChannel.NOTIFICATION_IMPORTANCE_DEFAULT;
+			channel.isLightsEnabled = true;
+			channel.isVibrationEnabled = true;
+			channel.lightColor = "#990000";
+			channel.lockscreenVisibility = NotificationChannel.VISIBILITY_PUBLIC;
+			channel.vibrationPattern = [10, 100, 100, 200, 100, 300, 100, 400, 100, 500, 100, 600, 100, 700, 100, 800];
+			channel.description = "channel description";
+			
+			// finally register the channel.
+			OneSignal.registerChannel(channel);
+		}
+	}
+	
 	private function init():void
 	{
 		// Remove OverrideAir debugger in production builds
@@ -185,6 +215,7 @@ public class Main extends Sprite
 		// add listeners
 		OneSignal.listener.addEventListener(OneSignalEvents.NOTIFICATION_RECEIVED, onNotificationReceived);
 		OneSignal.listener.addEventListener(OneSignalEvents.NOTIFICATION_OPENED, onNotificationOpened);
+		
 		
 		//----------------------------------------------------------------------
 		var btn0:MySprite = createBtn("Ask for permission", 0xDFE4FF);
