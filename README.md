@@ -1,3 +1,7 @@
+## Development of this ANE is now part of [Firebase FCM ANE](https://github.com/myflashlab/Firebase-ANE) and this repository will no longer be maintained.##
+
+**The OneSignal ANE is highly dependent on Firebase FCM and it was not making sense to have two seperated ANEs for nearly one purpose. From now on, FCM and OneSignal ANEs will be developed inside the FCM ANE.**
+
 # OneSignal-ANE
 OneSignal is a very powerful platform for sending rich notifications on Android/iOS apps and we have now transpiled the whole framework fully to AdobeAIR! You can send rich notifications to your Android/iOS apps built with AdobeAIR.
 
